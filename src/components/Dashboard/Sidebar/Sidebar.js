@@ -11,7 +11,7 @@ const Sidebar = () => {
     const [isDoctor, setIsDoctor] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/isDoctor', {
+        fetch('https://fast-lake-38919.herokuapp.com/isDoctor', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -42,6 +42,11 @@ const Sidebar = () => {
                     <li>
                         <Link to="/allPatients" className="text-white">
                             <FontAwesomeIcon icon={faCalendar} /> <span>Appointments</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/orders" className="text-white">
+                            <FontAwesomeIcon icon={faCalendar} /> <span>Orders</span>
                         </Link>
                     </li>
                     <li>

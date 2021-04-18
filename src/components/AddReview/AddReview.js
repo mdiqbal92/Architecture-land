@@ -1,9 +1,9 @@
-import axios from 'axios';
 import React, { useState } from 'react';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
 
-const AddService = () => {
+const AddReview = () => {
     const { register, handleSubmit } = useForm();
     const [imageURL, setImageURL] = useState(null);
 
@@ -13,7 +13,7 @@ const AddService = () => {
             price: data.price,
             imageURL: imageURL
         }
-        const url = `https://fast-lake-38919.herokuapp.com/addService`;
+        const url = `https://fast-lake-38919.herokuapp.com/addReview`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -45,10 +45,11 @@ const AddService = () => {
             <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
                 <h3>Add a New Service here</h3>
                 <form style={{ margin: '40px' }} className="container" onSubmit={handleSubmit(onSubmit)}>
-                    <label htmlFor="name">Service Name</label>
-                    <input className="form-control" name="name" defaultValue="New Service" ref={register} /><br />
-                    <label htmlFor="price">Service Cost</label>
-                    <input className="form-control" name="price" ref={register} /><br />
+                    <label htmlFor="name">Quote</label>
+                    <input className="form-control" name="quote" ref={register} /><br />
+                    <label htmlFor="price">Name</label>
+                    <input className="form-control" name="name" ref={register} /><br />
+                    <input className="form-control" name="from" ref={register} /><br />
                     <input type="file" onChange={handleImageUpload} /> <br /> <br />
                     <input className="btn btn-success" type="submit" />
                 </form>
@@ -58,4 +59,4 @@ const AddService = () => {
     );
 };
 
-export default AddService;
+export default AddReview;

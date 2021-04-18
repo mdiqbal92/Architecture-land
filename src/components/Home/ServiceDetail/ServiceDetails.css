@@ -1,5 +1,5 @@
 .service-card{
-    transition: width 2s, height 2s, transform 2s;
+    transition: width 1s, height 1s, transform 1s;
 }
 .service-card:hover{
     width: 300px;
