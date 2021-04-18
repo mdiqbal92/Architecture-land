@@ -1,0 +1,6 @@
+.header-container {
+    height:600px;
+    position:relative;
+    background-image: url('../../../images/archiBG.jpg');
+    background-size: cover;
+}
