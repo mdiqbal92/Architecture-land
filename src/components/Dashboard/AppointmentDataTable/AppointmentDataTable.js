@@ -23,7 +23,7 @@ const AppointmentDataTable = ({appointments}) => {
                         <td>{appointment.name}</td>
                         <td>{appointment.gender}</td>
                         <td>{appointment.age}</td>
-                        <td>{appointment.weight}</td>
+                        <td>{appointment.profession}</td>
                         <td>{appointment.phone}</td>
                         <td>{appointment.email}</td>
                     </tr>

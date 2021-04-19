@@ -24,7 +24,7 @@ const AddReview = () => {
         })
             .then(res => console.log(res))
         console.log(ServiceData)
-        alert('Service Added Successfully')
+        alert('Review Added Successfully')
     };
     const handleImageUpload = (event) => {
         const imageData = new FormData();
@@ -50,12 +50,13 @@ const AddReview = () => {
                     <input className="form-control" name="quote" ref={register} /><br />
                     <label htmlFor="price">Name</label>
                     <input className="form-control" name="name" ref={register} /><br />
+                    <label htmlFor="price">From</label>
                     <input className="form-control" name="from" ref={register} /><br />
                     <input type="file" onChange={handleImageUpload} /> <br /> <br />
                     <input className="btn btn-success" type="submit" />
+                    
                 </form>
             </div>
-
         </div>
     );
 };

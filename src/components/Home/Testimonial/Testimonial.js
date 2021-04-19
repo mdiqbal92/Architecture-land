@@ -14,6 +14,7 @@ const Testimonial = (props) => {
                     <p className="m-0">{from}</p>
                 </div>
             </div>
+            
        </div>
     );
 };

@@ -35,7 +35,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                     <Link to="/addReview" className="text-white">
-                        <FontAwesomeIcon icon={faHouseUser} /> <span>AddAReview</span>
+                        <FontAwesomeIcon icon={faHouseUser} /> <span>Add A Review</span>
                     </Link>
                 </li>
                 {isDoctor && <div>

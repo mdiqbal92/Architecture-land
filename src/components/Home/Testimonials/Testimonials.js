@@ -16,12 +16,14 @@ const Testimonials = () => {
                <div className="section-header">
                    <h5 className="text-primary text-uppercase">Reviews</h5>
                    <h1>What Our Clients <br/> Say </h1>
+                   <hr/>
                </div>
                <div className="card-deck mt-5">
                     {
                         review.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.name}/>)
                     }
                 </div>
+                <hr/>
            </div>
        </section>
     );
